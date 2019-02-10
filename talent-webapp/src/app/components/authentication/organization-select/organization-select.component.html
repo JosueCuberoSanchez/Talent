@@ -1,0 +1,42 @@
+<div class="container-fluid" id="container-fluid">
+  <div class="row" id="general-row">
+    <div class="d-xs-block d-sm-block d-md-block col-lg-5" id="handshake">
+
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7" id="container-row2">
+      <div id="sign-up-row">
+        <span id="sign-up-suggestion">Don't have an account?</span>
+        <a routerLink="/sign-up/step-one" routerLinkActive="active" id="signin-link">
+          <button type="button" class="btn btn-primary" id="sign-up-button">
+            Sign up
+          </button>
+        </a>
+      </div>
+
+      <div id="logo-row">
+		<a routerLink="/landing-page">
+          <img src="/assets/images/talent-logo.png" id="talent-logo">
+        </a>
+      </div>
+
+      <form>
+        <div id="form-row">
+          <p id="id-label">Organization's id</p>
+          <input [ngClass]="(error == false)?'id-input':'id-input id-input-error'" #idInput placeholder="Organization's id" />
+          <span id="talent-domain">.talent.cr</span>
+          <div class="id-error" [hidden]="!error">Invalid id.</div>
+        </div>
+
+        <div id="next-button-div">
+          <button id="next-button" (click)="redirectToOrganization(idInput.value)">
+            Next
+            <img src="/assets/images/arrow.png" class="img-fluid" id="arrow" alt="Responsive image">
+          </button>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

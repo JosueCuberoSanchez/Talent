@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>cr.talent</groupId>
+	<artifactId>talent</artifactId>
+	<packaging>pom</packaging>
+	<version>0.1</version>
+	<name>talent</name>
+	
+	<issueManagement>
+		<system>Jira</system>
+		<url>http://jira.certified.cr</url>
+	</issueManagement>
+	
+	<scm>
+		<connection>scm:git://http://git.certified.cr:7990/git/TAL/talent.git</connection>
+		<developerConnection>scm:git://http://git.certified.cr:7990/git/TAL/talent.git</developerConnection>
+		<url>http://git.certified.cr:7990</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<properties>
+		<spring.security.version>5.0.4.RELEASE</spring.security.version>
+	</properties>
+
+		<dependencies>
+
+			<dependency>
+				<groupId>org.aspectj</groupId>
+				<artifactId>aspectjweaver</artifactId>
+				<version>1.9.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-core</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-web</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.security</groupId>
+				<artifactId>spring-security-config</artifactId>
+				<version>${spring.security.version}</version>
+			</dependency>
+          
+            <!-- SLF4J dependencies-->
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.7.25</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.25</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.powermock/powermock-module-junit4 -->
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>1.7.4</version>
+				<scope>test</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.powermock/powermock-api-mockito -->
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito2</artifactId>
+				<version>1.7.4</version>
+				<scope>test</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>javax.servlet-api</artifactId>
+				<version>3.1.0</version>
+				<scope>provided</scope>
+			</dependency>
+		</dependencies>
+	
+	<developers>
+		<developer>
+			<id>rodrigo.bartels</id>
+			<name>Rodrigo Bartels</name>
+			<email>rodrigobartels@gmail.com</email>
+			<roles>
+				<role>architect</role>
+				<role>product owner</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>raquel.fonseca</id>
+			<name>Raquel Fonseca</name>
+			<email>raquel.fonseca@ecci.ucr.ac.cr</email>
+			<roles>
+				<role>scrum master</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>mariana.abellan</id>
+			<name>Mariana Abellán</name>
+			<email>marianaabellan4@gmail.com</email>
+			<roles>
+				<role>ux/ui designer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>daniel.montesdeoca</id>
+			<name>Daniel Montes de Oca</name>
+			<email>daniel.montesdeocab@gmail.com</email>
+			<roles>
+				<role>team lead</role>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>maria.cubero</id>
+			<name>María José Cubero</name>
+			<email>majo.qbro@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>renato.mainieri</id>
+			<name>Renato Mainieri</name>
+			<email>renato.mainieri2110@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>elias.calderon</id>
+			<name>Elías Calderón</name>
+			<email>eliascr98@outlook.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>josue.cubero</id>
+			<name>Josué Cubero</name>
+			<email>jo96cube@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>josue.sarkis</id>
+			<name>Josué Sarkis</name>
+			<email>jolesa97@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>roberto.leandro</id>
+			<name>Roberto Leandro</name>
+			<email>roleandroflores12@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+		
+		<developer>
+			<id>otto.mena</id>
+			<name>Otto Mena Kikut</name>
+			<email>Otmerk1@gmail.com</email>
+			<roles>
+				<role>developer</role>
+			</roles>
+			<timezone>UTC-6</timezone>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>talent-ws</module>
+		<module>talent-core</module>
+	</modules>
+	
+</project>

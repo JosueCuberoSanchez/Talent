@@ -1,0 +1,42 @@
+body {
+  font-family: "Source Sans Pro", serif;
+}
+
+#title {
+  color: #294261;
+  font-family: "Source Sans Pro", serif;
+  font-size: 28px;
+  letter-spacing: 2.8px;
+  line-height: 36px;
+  margin-top: 4.19vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#text {
+  margin-top: 3.8vh;
+  margin-left: 12.98%;
+  margin-right: 12.98%;
+  color: #A2A2A2;
+  font-family: "Source Sans Pro", serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 450px) {
+  #text {
+    margin-top: 0;
+  }
+}
+
+#questions {
+  margin-top: 4.68vh;
+  margin-left: 12.98%;
+  margin-bottom: 10.74vh;
+  color: #A2A2A2;
+  font-family: "Source Sans Pro", serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: justify;
+}

@@ -1,0 +1,141 @@
+<div class="container-fluid">
+
+
+  <div class="row" id="basic-info">
+    <div id="top-content">
+      <div id="image">
+        <div id="image-div">
+          <img [src]="userProfilePicture" alt="image" id="profilePicture">
+        </div>
+      </div>
+      <div id="information">
+        <div class="user-name"><p class="name">{{name}}</p></div>
+        <div class="user-info"><p class="position-info">Junior Software Developer<br/>Technical Resource</p></div>
+      </div>
+      <div *ngIf="canEdit" id="edit-option">
+        <div class="edit-button" (click)="onEditButton()">
+          <i class="fas fa-pencil-alt" id="edit-pencil" title="Edit"></i>
+        </div>
+      </div>
+      <div class="align-right">
+        <div class="user-name"><p class="name">Technical Manager</p></div>
+        <div class="user-info"><p class="position-info">Rodrigo Bartels</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="project-tabs">
+    <ngb-tabset justify="fill">
+      <ngb-tab title="Projects">
+        <ng-template ngbTabContent>
+          <div class="row">
+            <div *ngFor="let project of userProjects" class="content-card">
+              <div class="project-info">
+                <div class="project-basic-info">
+                  <div id="project-name">{{project.name}}</div>
+                </div>
+                <div class="project-basic-info">
+                  <div><i class="far fa-clock date-clock" style="display: inline-block;"></i>
+                    <div id="start-date">{{project.startDate | date: 'dd-MM-yyyy'}}</div>
+                    <span id="date-hyphen">-</span>
+                    <div id="end-date">{{ project.endDate == 'Present' ? 'Present' : project.endDate | date:
+                      'dd-MM-yyyy'}}
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="cards-right-content">
+                <div class="vertical-line"></div>
+                <div class="block-info">
+                  <div id="resource-project-position-label">Position</div>
+                  <div id="resource-project-position">{{project.resourcePosition}}</div>
+                </div>
+                <div class="vertical-line"></div>
+                <div id="project-status">
+                  <div class="status-icon" [class.red-status-icon]="project.projectRedStatus"
+                       [class.yellow-status-icon]="project.projectYellowStatus"></div>
+                  <div id="status">{{project.projectStatus | uppercase}}</div>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="block-info">
+                  <div class="see-projects-button arrow-icon" (click)="onSeeProject(project.id)">
+                    SEE PROJECT <i class="fas fa-angle-right arrow"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Kudos & warnings">
+        <ng-template ngbTabContent>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="feedback-container">
+                <div class="kudos-title">
+                  <i class="far fa-thumbs-up"></i>
+                  <span>Kudos</span>
+                </div>
+                <div *ngIf="noFeedbacks">
+                  <div class="content-card">
+                    <div class="feedback-message">This resource has no kudos yet.</div>
+                  </div>
+                </div>
+                <div *ngFor="let feedback of userFeedbacks">
+                  <div *ngIf="feedback.feedbackType == 'KUDO'">
+                    <div class="content-card">
+                      <div class="feedback-card-content">{{feedback.observer}}</div>
+                      <div class="feedback-message">gave you a Kudo</div>
+                      <div class="feedback-comment">{{feedback.description}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div *ngIf="canEdit">
+                <div class="feedback-container">
+                  <div class="warnings-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>Warnings</span>
+                  </div>
+                  <div *ngIf="noFeedbacks">
+                    <div class="content-card">
+                      <div class="feedback-message">You have no warnings.</div>
+                    </div>
+                  </div>
+                  <div *ngFor="let feedback of userFeedbacks">
+                    <div *ngIf="feedback.feedbackType == 'WARNING'">
+                      <div class="content-card">
+                        <div class="feedback-card-content">{{feedback.observer}}</div>
+                        <div class="feedback-message">gave you a Warning</div>
+                        <div class="feedback-comment">{{feedback.description}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Skills">
+        <ng-template ngbTabContent>
+          <div class="row">
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab title="Education records">
+        <ng-template ngbTabContent>
+          <p> Education records works!</p>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+
+  <div class="pr"></div>
+
+</div>
+

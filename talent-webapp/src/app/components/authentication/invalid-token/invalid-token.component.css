@@ -1,0 +1,57 @@
+body {
+  font-family: "Source Sans Pro", serif;
+}
+
+#container-fluid, #general-row, #container-row1, #container-row2{
+  margin:0;
+  padding:0;
+}
+
+#nav-bar {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#container-row1 {
+  background: url(../../../../assets/images/handshake.png) no-repeat center;
+  background-size: cover
+}
+
+@media only screen and (max-width: 1000px) {
+  #container-row1 {
+    display: none;
+  }
+}
+
+#nav-bar {
+  margin-left: 2.85%;
+}
+
+#talent-logo {
+  margin-top: 0.39vh;
+  height: 69px;
+}
+
+#forgot-password-h {
+  color: #294261;
+  font-size: 36px;
+  letter-spacing: -0.51px;
+  line-height: 43px;
+  margin-top: 32.22vh;
+  text-align: center;
+}
+
+#confirmation-message {
+  height: 75px;
+  width: 349px;
+  color: #B9BBBE;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+  line-height: 23px;
+  text-align: center;
+  margin-top: 5.27vh;
+  margin-bottom: 36.81vh;
+  margin-left: auto;
+  margin-right: auto;
+}
